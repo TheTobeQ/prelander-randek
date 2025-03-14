@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sprawdź ranking najlepszych portali randkowych w 2025 roku. Opinie, recenzje i najlepsze oferty dla osób szukających miłości online.">
+    <meta name="keywords" content="portale randkowe, najlepsze portale randkowe, randki online, miłość online, FlirtOnline, NajlepszyPortal">
     <title>Najlepsze Portale Randkowe 2025 – Ranking i Opinie</title>
     <style>
         body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; }
@@ -12,11 +14,19 @@
         .ranking li { background: #fff; margin: 10px 0; padding: 15px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
         .cta { display: block; text-align: center; background: #d10000; color: white; padding: 15px; border-radius: 5px; text-decoration: none; font-size: 20px; font-weight: bold; margin: 20px 0; }
         .cta:hover { background: #ff0000; }
+        .language-selector { text-align: center; margin: 20px 0; }
+        .language-selector a { padding: 10px 15px; background: #d10000; color: white; text-decoration: none; border-radius: 5px; margin: 0 5px; font-weight: bold; }
+        .language-selector a:hover { background: #ff0000; }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <div class="language-selector">
+        <a href="?lang=pl">PL</a>
+        <a href="?lang=en">EN</a>
+    </div>
+
     <h1>🔥 Ranking Portali Randkowych 2025 🔥</h1>
     <p>Sprawdź, które portale randkowe są najpopularniejsze w 2025 roku. Opinie użytkowników i recenzje!</p>
 
@@ -36,6 +46,63 @@
     <a href="https://check-link.eu/p/VJX8/taBX/smx3" class="cta">🔥 Zarejestruj się teraz! 🔥</a>
 
 </div>
+
+<script>
+    // Funkcja do zmiany treści strony na podstawie wybranego języka
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'pl';
+
+    const texts = {
+        'pl': {
+            title: 'Najlepsze Portale Randkowe 2025 – Ranking i Opinie',
+            heading: '🔥 Ranking Portali Randkowych 2025 🔥',
+            description: 'Sprawdź, które portale randkowe są najpopularniejsze w 2025 roku. Opinie użytkowników i recenzje!',
+            whyTitle: 'Dlaczego warto?',
+            benefits: [
+                '✅ Szybka rejestracja',
+                '✅ Tysiące użytkowników online',
+                '✅ Realne osoby szukające randki'
+            ],
+            cta: '🔥 Zarejestruj się teraz! 🔥',
+            button1: '➡ Dołącz teraz!',
+            button2: '➡ Sprawdź teraz!',
+            button3: '➡ Wypróbuj za darmo!'
+        },
+        'en': {
+            title: 'Best Dating Sites 2025 – Ranking and Reviews',
+            heading: '🔥 Best Dating Sites of 2025 🔥',
+            description: 'Find out which dating sites are the most popular in 2025. User reviews and rankings!',
+            whyTitle: 'Why Choose Us?',
+            benefits: [
+                '✅ Quick registration',
+                '✅ Thousands of users online',
+                '✅ Real people looking for dates'
+            ],
+            cta: '🔥 Sign Up Now! 🔥',
+            button1: '➡ Join Now!',
+            button2: '➡ Check It Out Now!',
+            button3: '➡ Try It Free!'
+        }
+    };
+
+    // Aktualizacja treści strony na podstawie wybranego języka
+    document.title = texts[lang].title;
+    document.querySelector('h1').textContent = texts[lang].heading;
+    document.querySelector('p').textContent = texts[lang].description;
+    document.querySelectorAll('.cta')[0].textContent = texts[lang].cta;
+    document.querySelectorAll('.cta')[0].setAttribute('href', "https://check-link.eu/p/VJX8/taBX/smx3");
+    document.querySelectorAll('.cta')[1].textContent = texts[lang].button1;
+    document.querySelectorAll('.cta')[2].textContent = texts[lang].button2;
+    document.querySelectorAll('.cta')[3].textContent = texts[lang].button3;
+
+    const whyTitle = document.querySelector('p strong');
+    whyTitle.textContent = texts[lang].whyTitle;
+
+    const benefitsList = document.querySelectorAll('.ranking ul li');
+    benefitsList.forEach((li, index) => {
+        li.textContent = texts[lang].benefits[index];
+    });
+</script>
 
 </body>
 </html>
